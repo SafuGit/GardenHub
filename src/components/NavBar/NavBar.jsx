@@ -20,6 +20,7 @@ const NavBar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
+          <img className='w-10 rounded-full' src="/assets/GardenLogo2.png" alt="" />
           <h1>🌿<span className='text-yellow-600'>Garden</span>Hub</h1>
         </a>
       </div>
