@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Root from './layout/Root'
 import Home from './components/Home/Home'
+import AuthProvider from './contexts/AuthProvider'
 
 const router = createBrowserRouter([
   {path: '/', Component: Root, children: [
@@ -13,6 +14,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </StrictMode>,
 )
