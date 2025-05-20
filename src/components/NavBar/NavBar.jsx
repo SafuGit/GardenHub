@@ -15,8 +15,8 @@ const NavBar = () => {
             <li><NavLink to={'/'}>Home</NavLink></li>
             <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
             <li><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
-            <li><NavLink to={'/shareGarden'}>Share a Garden Trip</NavLink></li>
-            <li><NavLink to={'/myTips'}>My Tips</NavLink></li>
+            {/* <li><NavLink to={'/shareGarden'}>Share a Garden Trip</NavLink></li>
+            <li><NavLink to={'/myTips'}>My Tips</NavLink></li> */}
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
@@ -29,12 +29,12 @@ const NavBar = () => {
           <li><NavLink to={'/'}>Home</NavLink></li>
           <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
           <li><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
-          <li><NavLink to={'/shareGarden'}>Share a Garden Trip</NavLink></li>
-          <li><NavLink to={'/myTips'}>My Tips</NavLink></li>
+          {/* <li><NavLink to={'/shareGarden'}>Share a Garden Trip</NavLink></li>
+          <li><NavLink to={'/myTips'}>My Tips</NavLink></li> */}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn btn-info">Login</a>
       </div>
     </div>
   );

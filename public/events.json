@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Urban Gardening Workshop",
+    "subtitle": "Learn how to grow herbs and veggies on your balcony.",
+    "location": "GreenLeaf Community Center, San Francisco, CA",
+    "backgroundImage": "https://img.freepik.com/premium-photo/landscaping-team-installing-decorative-garden-features-arranging-plants-outdoor-event-depicted-highresolution_36897-42500.jpg?w=360"
+  },
+  {
+    "title": "Composting 101",
+    "subtitle": "Turn your kitchen waste into rich garden compost.",
+    "location": "EcoFarm Garden Hub, Portland, OR",
+    "backgroundImage": "https://img.freepik.com/premium-photo/friends-gardening-together-backyard_1280275-146031.jpg"
+  },
+  {
+    "title": "Hydroponics for Beginners",
+    "subtitle": "Discover soil-free gardening and grow anywhere.",
+    "location": "GreenTech Expo Hall, Austin, TX",
+    "backgroundImage": "https://img.freepik.com/premium-photo/people-gardening-together-community-garden-planting-watering_1079150-270055.jpg"
+  }
+]
