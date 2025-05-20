@@ -39,3 +39,10 @@
 @theme {
   --font-nunito: 'Nunito', sans-serif;
 }
+
+.active {
+  color: oklch(64% 0.2 131.684);
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 4px;
+}
