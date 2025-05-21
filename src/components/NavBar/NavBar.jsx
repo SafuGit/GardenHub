@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../../contexts/AuthContext';
+import { BiLogOut } from 'react-icons/bi';
 
 const NavBar = () => {
+  const {user} = use(AuthContext);
+
   return (
     <div className="navbar bg-base-200 shadow-sm border-base-300 border-b mb-20">
       <div className="navbar-start">
@@ -34,7 +38,17 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn btn-info" to={'/login'}>Login</Link>
+        {user ? <div>
+          <div className="avatar group relative flex flex-col items-center">
+            <div className="w-12 rounded-full">
+              <img src={user.photoURL} />
+            </div>
+            <div className='group-hover:opacity-100 opacity-0'>
+              <p className='absolute top-16 right-0 bg-base-200 p-1 rounded-xl'>{user.displayName}</p>
+              <button className='btn btn-error absolute top-25 right-0'>LogOut <BiLogOut></BiLogOut></button>
+            </div>
+          </div>
+        </div> : <Link className="btn btn-info" to={'/login'}>Login</Link>}
       </div>
     </div>
   );
