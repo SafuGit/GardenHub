@@ -1,24 +1,65 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../../contexts/AuthContext';
+import Swal from 'sweetalert2';
 
 const Register = () => {
+
+  const { createUser } = use(AuthContext);
+
+  const handleSignUp = e => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const [name, email, photoURL, password] = [formData.get('name'), formData.get('email'), formData.get('photoURL'), formData.get('password')];
+    console.log(name, email, photoURL, password);
+
+    createUser(email, password)
+      .then(result => {
+        console.log(result);
+        Swal.fire({
+          title: 'Successfully Registered!',
+          icon: 'success',
+          background: '#1e1e1e',
+          color: '#a0ffb0', 
+          iconColor: '#00ff88', 
+          confirmButtonColor: '#00c472', 
+          customClass: {
+            popup: 'my-swal-dark'
+          }
+        })
+      }).catch(error => {
+        console.log(error);
+        Swal.fire({
+          title: error.message,
+          icon: 'error',
+          background: '#1e1e1e',
+          color: 'white', 
+          confirmButtonColor: 'red', 
+          customClass: {
+            popup: 'my-swal-dark'
+          }
+        })
+      })
+  }
+
   return (
     <div className='w-full mx-auto flex justify-center'>
-      <form action="">
+      <form onSubmit={handleSignUp}>
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
           <legend className="fieldset-legend">Register</legend>
 
           <label className="label">Name</label>
-          <input type="text" className="input" placeholder="Name" />
+          <input type="text" className="input" placeholder="Name" name='name' />
 
           <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email" />
+          <input type="email" className="input" placeholder="Email" name='email' />
 
           <label className="label">Photo URL</label>
-          <input type="text" className="input" placeholder="Photo URL" />
+          <input type="text" className="input" placeholder="Photo URL" name='photoURL' />
 
           <label className="label">Password</label>
-          <input type="password" className="input" placeholder="Password" />
+          <input type="password" className="input" placeholder="Password" name='password' />
 
           <button className="btn btn-neutral mt-4 mb-2" type='submit'>Register</button>
           <button className="btn bg-white text-black border-[#e5e5e5]" type='button'>
