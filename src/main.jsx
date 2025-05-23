@@ -9,6 +9,7 @@ import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import ShareTip from './components/ShareTip/ShareTip'
 import PrivateRoute from './layout/PrivateRoute'
+import BrowseTips from './components/BrowseTips/BrowseTips'
 
 const router = createBrowserRouter([
   {path: '/', Component: Root, children: [
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       element: <PrivateRoute>
         <ShareTip></ShareTip>
       </PrivateRoute>
+    },
+    {
+      path: '/browseTips',
+      Component: BrowseTips,
+      loader: () => fetch('http://localhost:3000/tips/public'),
     }
   ]}
 ])
