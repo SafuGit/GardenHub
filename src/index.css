@@ -2,7 +2,7 @@
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: ["GardenTheme", "GardenThemeLight", "dark", "light"];
-};
+}
 @plugin "daisyui/theme" {
   name: "GardenTheme";
   default: true;

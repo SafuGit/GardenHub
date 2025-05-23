@@ -12,6 +12,8 @@ import PrivateRoute from './layout/PrivateRoute'
 import BrowseTips from './components/BrowseTips/BrowseTips'
 import TipDetails from './components/TipDetails/TipDetails'
 import NotFound from './components/NotFound/NotFound'
+import MyTips from './components/MyTips/MyTips'
+import Loading from './components/Loading/Loading'
 
 const router = createBrowserRouter([
   {path: '/', Component: Root, children: [
@@ -22,7 +24,8 @@ const router = createBrowserRouter([
       path: '/shareTip', 
       element: <PrivateRoute>
         <ShareTip></ShareTip>
-      </PrivateRoute>
+      </PrivateRoute>,
+      hydrateFallbackElement: <Loading></Loading>
     },
     {
       path: '/browseTips',
@@ -33,6 +36,10 @@ const router = createBrowserRouter([
       path: 'tips/:id',
       Component: TipDetails,
       loader: async ({params}) => fetch(`http://localhost:3000/tips/${params.id}`),
+    },
+    {
+      path: '/myTips',
+      Component: MyTips,
     }
   ]},
   {
