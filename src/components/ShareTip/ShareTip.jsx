@@ -22,7 +22,18 @@ const ShareTip = () => {
       userEmail: user.email,
       imageURL: imageURL
     }
-    console.log(tip);
+
+    fetch('http://localhost:3000/tips', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(tip)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log("after adding tip", data);
+      })
   }
 
   return (
