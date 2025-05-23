@@ -2,9 +2,39 @@ import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../contexts/AuthContext';
 import { BiLogOut } from 'react-icons/bi';
+import Swal from 'sweetalert2';
 
 const NavBar = () => {
-  const {user} = use(AuthContext);
+  const {user, logOut} = use(AuthContext);
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          title: 'Successfully Logged Out!',
+          icon: 'success',
+          background: '#1e1e1e',
+          color: '#a0ffb0', 
+          iconColor: '#00ff88', 
+          confirmButtonColor: '#00c472', 
+          customClass: {
+            popup: 'my-swal-dark'
+          }
+        })
+      }).catch(error => {
+        console.log(error);
+        Swal.fire({
+          title: error.message,
+          icon: 'error',
+          background: '#1e1e1e',
+          color: 'white', 
+          confirmButtonColor: 'red', 
+          customClass: {
+            popup: 'my-swal-dark'
+          }
+        })
+      })
+  }
 
   return (
     <div className="navbar bg-base-200 shadow-sm border-base-300 border-b mb-20">
@@ -19,8 +49,9 @@ const NavBar = () => {
             <li><NavLink to={'/'}>Home</NavLink></li>
             <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
             <li><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
-            {/* <li><NavLink to={'/shareGarden'}>Share a Garden Trip</NavLink></li>
-            <li><NavLink to={'/myTips'}>My Tips</NavLink></li> */}
+            {user ? <div className='flex flex-col'> 
+              <li><NavLink to={'/shareTip'}>Share a Garden Trip</NavLink></li>
+              <li><NavLink to={'/myTips'}>My Tips</NavLink></li> </div> : ""}
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
@@ -33,8 +64,9 @@ const NavBar = () => {
           <li><NavLink to={'/'}>Home</NavLink></li>
           <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
           <li><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
-          {/* <li><NavLink to={'/shareGarden'}>Share a Garden Trip</NavLink></li>
-          <li><NavLink to={'/myTips'}>My Tips</NavLink></li> */}
+          {user ? <div className='flex'> 
+            <li><NavLink to={'/shareTip'}>Share a Garden Trip</NavLink></li>
+            <li><NavLink to={'/myTips'}>My Tips</NavLink></li> </div> : ""}
         </ul>
       </div>
       <div className="navbar-end">
@@ -44,8 +76,8 @@ const NavBar = () => {
               <img src={user.photoURL} />
             </div>
             <div className='group-hover:opacity-100 opacity-0'>
-              <p className='absolute top-16 right-0 bg-base-200 p-1 rounded-xl'>{user.displayName}</p>
-              <button className='btn btn-error absolute top-25 right-0'>LogOut <BiLogOut></BiLogOut></button>
+              <p className='absolute top-16 right-0 bg-base-200 p-1 rounded-xl truncate'>{user.displayName}</p>
+              <button className='btn btn-error absolute top-25 right-0' onClick={handleSignOut}>LogOut <BiLogOut></BiLogOut></button>
             </div>
           </div>
         </div> : <Link className="btn btn-info" to={'/login'}>Login</Link>}
