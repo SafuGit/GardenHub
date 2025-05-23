@@ -1,11 +1,13 @@
 import React, { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 import { AuthContext } from '../../contexts/AuthContext';
 import { BiLogOut } from 'react-icons/bi';
 import Swal from 'sweetalert2';
 
 const NavBar = () => {
   const {user, logOut} = use(AuthContext);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const handleSignOut = () => {
     logOut()
@@ -37,7 +39,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className="navbar bg-base-200 shadow-sm border-base-300 border-b mb-20">
+    <div className={`navbar bg-base-200 shadow-sm border-base-300 border-b ${isHomePage ? "" : "mb-20"}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
