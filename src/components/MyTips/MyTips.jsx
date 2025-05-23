@@ -93,12 +93,12 @@ const MyTips = () => {
                     {tip.difficulty == 'Medium' ? <div className='badge bg-yellow-700 text-white'>MEDIUM</div> : ""}
                     {tip.difficulty == 'Easy' ? <div className='badge bg-secondary text-white'>EASY</div> : ""}
                   </td>
-                  <td>{tip.plantType}</td>
+                  <td className='text-lg'>{tip.plantType}</td>
                   <td>
                     {tip.availability == 'public' ? <div className='badge badge-success text-black'>Public <BsEye></BsEye></div> : <div className='badge badge-error'>Private <BiLock></BiLock></div>}
                   </td>
                   <td>
-                    <Link to={`/updateTip/${tip._id}`} className='btn btn-warning text-xl rounded-lg mr-2'><BiEdit></BiEdit></Link>
+                    <Link to={`/updateTips/${tip._id}`} className='btn btn-warning text-xl rounded-lg mr-2'><BiEdit></BiEdit></Link>
                     <button className='btn btn-error text-xl rounded-lg' onClick={() => handleDelete(tip._id)}><MdDelete></MdDelete></button>
                   </td>
               </tr>
