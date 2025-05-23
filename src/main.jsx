@@ -11,6 +11,7 @@ import ShareTip from './components/ShareTip/ShareTip'
 import PrivateRoute from './layout/PrivateRoute'
 import BrowseTips from './components/BrowseTips/BrowseTips'
 import TipDetails from './components/TipDetails/TipDetails'
+import NotFound from './components/NotFound/NotFound'
 
 const router = createBrowserRouter([
   {path: '/', Component: Root, children: [
@@ -33,7 +34,11 @@ const router = createBrowserRouter([
       Component: TipDetails,
       loader: async ({params}) => fetch(`http://localhost:3000/tips/${params.id}`),
     }
-  ]}
+  ]},
+  {
+    path: '*',
+    Component: NotFound,
+  }
 ])
 
 createRoot(document.getElementById('root')).render(
