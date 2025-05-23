@@ -3,6 +3,7 @@ import './ShareTip.css';
 import { BsPerson } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { AuthContext } from '../../contexts/AuthContext';
+import Swal from 'sweetalert2';
 
 const ShareTip = () => {
   const {user} = use(AuthContext);
@@ -33,6 +34,18 @@ const ShareTip = () => {
       .then(res => res.json())
       .then(data => {
         console.log("after adding tip", data);
+        Swal.fire({
+          title: 'Tip Added Successfully!',
+          icon: 'success',
+          background: '#1e1e1e',
+          color: '#a0ffb0', 
+          iconColor: '#00ff88', 
+          confirmButtonColor: '#00c472', 
+          customClass: {
+            popup: 'my-swal-dark'
+          }
+        })
+        form.reset();
       })
   }
 

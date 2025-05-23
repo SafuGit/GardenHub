@@ -73,7 +73,7 @@ const NavBar = () => {
         {user ? <div>
           <div className="avatar group relative flex flex-col items-center">
             <div className="w-12 rounded-full">
-              <img src={user.photoURL} />
+              <img src={user.photoURL} referrerPolicy="no-referrer"/>
             </div>
             <div className='group-hover:opacity-100 opacity-0'>
               <p className='absolute top-16 right-0 bg-base-200 p-1 rounded-xl truncate'>{user.displayName}</p>
