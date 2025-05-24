@@ -25,7 +25,7 @@ const ShareTip = () => {
       totalLikes: 0,
     }
 
-    fetch('http://localhost:3000/tips', {
+    fetch('https://gardenhub-server-nine.vercel.app/tips', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

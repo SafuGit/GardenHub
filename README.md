@@ -1,3 +1,28 @@
+
+# GardenHub
+*A Gardening app with many features such as Tip Sharing, Connections with Gardeners etc.*
+## Live URL
+- https://safu-a10.web.app/
+## Description
+A platform for gardening enthusiasts to share tips, find local gardeners, ask plant care questions, post or join gardening events, and connect over shared interests like composting, hydroponics, balcony gardens, etc.
+## Packages Used
+
+```
+"@tailwindcss/vite": "^4.1.7",
+"firebase": "^11.7.3",
+"react": "^19.1.0",
+"react-dom": "^19.1.0",
+"react-icons": "^5.5.0",
+"react-router": "^7.6.0",
+"react-simple-typewriter": "^5.0.1",
+"react-slick": "^0.30.3",
+"react-tooltip": "^5.28.1",
+"slick-carousel": "^1.8.1",
+"sweetalert2": "^11.21.2",
+"tailwindcss": "^4.1.7",
+"theme-change": "^2.5.0"
+```
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

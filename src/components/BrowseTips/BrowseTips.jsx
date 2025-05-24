@@ -7,7 +7,7 @@ const BrowseTips = () => {
   const [dataState, setDataState] = useState(data);
 
   const handleFilter = (difficulty) => {
-    fetch(`http://localhost:3000/tips/public/difficulty/${difficulty}`)
+    fetch(`https://gardenhub-server-nine.vercel.app/tips/public/difficulty/${difficulty}`)
       .then(res => res.json())
       .then(resultData => {
         setDataState(resultData);

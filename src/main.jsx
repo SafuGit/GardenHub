@@ -32,13 +32,13 @@ const router = createBrowserRouter([
     {
       path: '/browseTips',
       Component: BrowseTips,
-      loader: () => fetch('http://localhost:3000/tips/public'),
+      loader: () => fetch('https://gardenhub-server-nine.vercel.app/tips/public'),
       hydrateFallbackElement: <Loading></Loading>
     },
     {
       path: 'tips/:id',
       Component: TipDetails,
-      loader: async ({params}) => fetch(`http://localhost:3000/tips/${params.id}`),
+      loader: async ({params}) => fetch(`https://gardenhub-server-nine.vercel.app/tips/${params.id}`),
       hydrateFallbackElement: <Loading></Loading>
     },
     {
@@ -50,13 +50,13 @@ const router = createBrowserRouter([
     {
       path: 'updateTips/:id',
       Component: UpdateTips,
-      loader: async ({params}) => fetch(`http://localhost:3000/tips/${params.id}`),
+      loader: async ({params}) => fetch(`https://gardenhub-server-nine.vercel.app/tips/${params.id}`),
       hydrateFallbackElement: <Loading></Loading>
     },
     {
       path: '/gardeners',
       Component: ExploreGardeners,
-      loader: () => fetch('http://localhost:3000/gardeners'),
+      loader: () => fetch('https://gardenhub-server-nine.vercel.app/gardeners'),
       hydrateFallbackElement: <Loading></Loading>
     }
   ]},

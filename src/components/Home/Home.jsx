@@ -9,10 +9,10 @@ import TrendingTips from '../TrendingTips/TrendingTips';
 const eventsPromise = fetch('/events.json')
   .then(res => res.json());
 
-const gardenersPromise = fetch('http://localhost:3000/gardeners/active')
+const gardenersPromise = fetch('https://gardenhub-server-nine.vercel.app/gardeners/active')
   .then(res => res.json());
 
-const tipsPromise = fetch('http://localhost:3000/tips/6')
+const tipsPromise = fetch('https://gardenhub-server-nine.vercel.app/tips/6')
   .then(res => res.json());
 
 const Home = () => {

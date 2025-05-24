@@ -34,7 +34,7 @@ const UpdateTips = () => {
 
     // console.log(tip);
 
-    fetch(`http://localhost:3000/tips/${data._id}`, {
+    fetch(`https://gardenhub-server-nine.vercel.app/tips/${data._id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

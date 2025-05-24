@@ -9,7 +9,7 @@ const TipDetails = () => {
   const [liked, setLiked] = useState(false);
 
   const handleSetLiked = (id) => {
-    fetch(`http://localhost:3000/tips/like/${id}`, {
+    fetch(`https://gardenhub-server-nine.vercel.app/tips/like/${id}`, {
       method: 'PUT',
     }).then(res => res.json())
       // eslint-disable-next-line no-unused-vars

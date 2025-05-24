@@ -13,7 +13,7 @@ const MyTips = () => {
 
   useEffect(() => {
     if (!loading && user?.email) {
-      fetch(`http://localhost:3000/tips/user/${user.email}`)
+      fetch(`https://gardenhub-server-nine.vercel.app/tips/user/${user.email}`)
         .then(res => res.json())
         .then(resultData => {
           setData(resultData);
@@ -36,7 +36,7 @@ const MyTips = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/tips/${id}`, {
+        fetch(`https://gardenhub-server-nine.vercel.app/tips/${id}`, {
           method: 'DELETE',
         })
           .then(res => res.json())
