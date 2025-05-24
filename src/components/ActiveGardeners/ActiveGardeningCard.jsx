@@ -24,7 +24,7 @@ const ActiveGardeningCard = ({gardener}) => {
               gardener.gender == 'Male' ? <MdMale className='text-4xl text-blue-400'></MdMale> : <MdFemale className='text-4xl text-pink-400'></MdFemale>
             }
           </div>
-          {gardener.status == 'active' ? <div className='badge badge-success'>ACTIVE</div> : ""}
+          {gardener.status == 'active' ? <div className='badge badge-success'>ACTIVE</div> : <div className='badge badge-error'>INACTIVE</div>}
         </div>
         <p>
           {gardener.bio} <br /> <br />

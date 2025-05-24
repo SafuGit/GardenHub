@@ -15,6 +15,7 @@ import NotFound from './components/NotFound/NotFound'
 import MyTips from './components/MyTips/MyTips'
 import Loading from './components/Loading/Loading'
 import UpdateTips from './components/UpdateTips/UpdateTips'
+import ExploreGardeners from './components/ExploreGardeners/ExploreGardeners'
 
 const router = createBrowserRouter([
   {path: '/', Component: Root, children: [
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
       path: 'updateTips/:id',
       Component: UpdateTips,
       loader: async ({params}) => fetch(`http://localhost:3000/tips/${params.id}`),
+      hydrateFallbackElement: <Loading></Loading>
+    },
+    {
+      path: '/gardeners',
+      Component: ExploreGardeners,
+      loader: () => fetch('http://localhost:3000/gardeners'),
       hydrateFallbackElement: <Loading></Loading>
     }
   ]},
