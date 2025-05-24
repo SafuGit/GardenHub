@@ -17,9 +17,9 @@ const BrowseTips = () => {
 
   return (
     <div className='w-[95vw] mx-auto'>
-      <div className='flex justify-between'>
+      <div className='flex justify-between items-end'>
         <h1 className='text-3xl font-bold text-white'>Browse Tips</h1>
-        <ul className="menu menu-horizontal bg-base-200 rounded-box gap-2">
+        <ul className="menu sm:menu-horizontal menu-vertical bg-base-200 rounded-box gap-2">
           <li className='bg-green-700 rounded-lg'><a onClick={() => handleFilter('Easy')}>Easy</a></li>
           <li className='bg-yellow-700 rounded-lg'><a onClick={() => handleFilter('Medium')}>Medium</a></li>
           <li className='bg-red-700 rounded-lg'><a onClick={() => handleFilter('Hard')}>Hard</a></li>

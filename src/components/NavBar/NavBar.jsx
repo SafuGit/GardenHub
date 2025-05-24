@@ -55,9 +55,10 @@ const NavBar = () => {
             {user ? <div className='flex flex-col'> 
               <li><NavLink to={'/shareTip'}>Share a Garden Trip</NavLink></li>
               <li><NavLink to={'/myTips'}>My Tips</NavLink></li> </div> : ""}
+            <ThemeChange></ThemeChange>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <a className="btn btn-ghost text-lg sm:text-xl">
           <img className='w-10 rounded-full' src="/assets/GardenLogo2.png" alt="" />
           <h1>🌿<span className='text-yellow-600'>Garden</span>Hub</h1>
         </a>
@@ -73,7 +74,9 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <ThemeChange></ThemeChange>
+        <div className='hidden sm:block'>
+          <ThemeChange></ThemeChange>
+        </div>
         {user ? <div>
           <div className="avatar group relative flex flex-col items-center">
             <div className="w-12 rounded-full hover:cursor-pointer">

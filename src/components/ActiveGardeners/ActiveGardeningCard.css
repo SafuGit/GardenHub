@@ -5,8 +5,10 @@
   background: linear-gradient(135deg, #10b981, #065f46); */
 /* } */
 
-.gardener-card:hover {
-  transform: scale(1.02);
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
+@media screen and (min-width: 768px) {
+  .gardener-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
 }

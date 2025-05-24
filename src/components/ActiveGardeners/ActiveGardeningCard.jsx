@@ -15,7 +15,8 @@ const ActiveGardeningCard = ({gardener}) => {
       <figure>
         <img
           src={gardener.image}
-          alt="Gardener Image" />
+          alt="Gardener Image" 
+          className='w-full'/>
       </figure>
       <div className="card-body">
         <div className='flex gap-2 justify-between'>

@@ -65,14 +65,14 @@ const TipDetails = () => {
           </div>
           <div className='mt-2 text-xl font-semibold flex gap-2'>
             <span className='underline underline-offset-5 text-white mr-2'>Category:</span>
-            <div className='badge badge-outline'>{data.category}</div>
+            <div className='badge badge-outline h-full'>{data.category}</div>
           </div>
           <div className='flex gap-4 mt-4'>
             <div className='flex gap-2 rounded-lg bg-base-100 p-2'>
               <IoPerson className='text-2xl rounded-lg text-blue-400'></IoPerson>
               <p>{data.userName}</p>
             </div>
-            <div className='flex gap-2 rounded-lg bg-base-100 p-2 flex-wrap text-wrap'>
+            <div className='flex gap-2 rounded-lg bg-base-100 p-2 flex-wrap text-wrap truncate'>
               <MdEmail className='text-2xl rounded-lg text-yellow-400'></MdEmail>
               <p>{data.userEmail}</p>
             </div>
