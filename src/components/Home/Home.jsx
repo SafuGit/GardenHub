@@ -4,10 +4,15 @@ import SectionTitle from '../../utils/SectionTitle';
 import Loading from '../Loading/Loading';
 import Hero from '../Hero/Hero';
 import ActiveGardeners from '../ActiveGardeners/ActiveGardeners';
+import TrendingTips from '../TrendingTips/TrendingTips';
 
 const eventsPromise = fetch('/events.json')
   .then(res => res.json());
+
 const gardenersPromise = fetch('http://localhost:3000/gardeners/active')
+  .then(res => res.json());
+
+const tipsPromise = fetch('http://localhost:3000/tips/6')
   .then(res => res.json());
 
 const Home = () => {
@@ -21,6 +26,10 @@ const Home = () => {
       <SectionTitle title={'Active Gardeners'} className={'italic mt-20 underline text-center'}></SectionTitle>
       <Suspense fallback={<Loading></Loading>}>
         <ActiveGardeners gardenersPromise={gardenersPromise}></ActiveGardeners>
+      </Suspense>
+      <SectionTitle title={'Trending Tips'} className={'italic font-bold mt-20 underline'}></SectionTitle>
+      <Suspense fallback={<Loading></Loading>}>
+        <TrendingTips tipsPromise={tipsPromise}></TrendingTips>
       </Suspense>
     </div>
   );
