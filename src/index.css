@@ -43,36 +43,53 @@
   default: false;
   prefersdark: false;
   color-scheme: "light";
-  --color-base-100: oklch(96% 0.03 82);
-  --color-base-200: oklch(90% 0.025 85);
-  --color-base-300: oklch(82% 0.03 80);
-  --color-base-content: oklch(20% 0.02 30);
-  --color-primary: oklch(60% 0.1 130);
-  --color-primary-content: oklch(100% 0 0);
-  --color-secondary: oklch(70% 0.12 165);
-  --color-secondary-content: oklch(20% 0.02 30);
-  --color-accent: oklch(75% 0.13 66);
-  --color-accent-content: oklch(15% 0.02 30);
-  --color-neutral: oklch(88% 0.01 40);
-  --color-neutral-content: oklch(15% 0.02 30);
-  --color-info: oklch(78% 0.15 240);
-  --color-info-content: oklch(20% 0.02 30);
-  --color-success: oklch(72% 0.2 130);
-  --color-success-content: oklch(15% 0.02 30);
-  --color-warning: oklch(85% 0.16 70);
-  --color-warning-content: oklch(20% 0.02 30);
-  --color-error: oklch(70% 0.1 30);
-  --color-error-content: oklch(100% 0 0);
-  --radius-selector: 2rem;
-  --radius-field: 2rem;
-  --radius-box: 0.5rem;
+  --color-base-100: oklch(55% 0.08 170);
+  --color-base-200: oklch(30% 0.065 152.934);
+  --color-base-300: oklch(40% 0.04 140);
+  --color-base-content: oklch(100% 0.067 122.328);
+
+  --color-primary: oklch(45% 0.35 120);
+  --color-primary-content: oklch(98% 0 0);
+
+  --color-secondary: oklch(60% 0.20 130);
+  --color-secondary-content: oklch(98% 0 0);
+
+  --color-accent: oklch(55% 0.40 200);
+  --color-accent-content: oklch(10% 0 0);
+
+  --color-neutral: oklch(28% 0.066 53.813);
+  --color-neutral-content: oklch(98% 0.031 120.757);
+
+  --color-info: oklch(55% 0.20 220);
+  --color-info-content: oklch(10% 0.02 230);
+
+  --color-success: oklch(50% 0.35 125);
+  --color-success-content: oklch(10% 0.02 120);
+
+  --color-warning: oklch(47% 0.157 37.304);
+  --color-warning-content: oklch(98% 0.016 73.684);
+
+  --color-error: oklch(25% 0.092 26.042);
+  --color-error-content: oklch(97% 0.014 343.198);
+
+  --radius-selector: 1.5rem;
+  --radius-field: 1.5rem;
+  --radius-box: 0.75rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
-  --border: 1px;
+  --border: 1.5px;
   --depth: 1;
-  --noise: 0;
+  --noise: 1;
 }
 
+.select option {
+  background-color: oklch(37% 0.077 168.94);
+  color: oklch(96% 0.067 122.328); 
+}
+
+.select option:hover {
+  background-color: oklch(43% 0.078 188.216);
+}
 
 @theme {
   --font-nunito: 'Nunito', sans-serif;

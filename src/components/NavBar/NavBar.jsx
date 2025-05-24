@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router';
 import { AuthContext } from '../../contexts/AuthContext';
 import { BiLogOut } from 'react-icons/bi';
 import Swal from 'sweetalert2';
+import ThemeChange from '../ThemeChange/ThemeChange';
 
 const NavBar = () => {
   const {user, logOut} = use(AuthContext);
@@ -72,6 +73,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <ThemeChange></ThemeChange>
         {user ? <div>
           <div className="avatar group relative flex flex-col items-center">
             <div className="w-12 rounded-full">
