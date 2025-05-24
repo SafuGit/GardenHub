@@ -23,7 +23,7 @@ const WhyUs = () => {
       <div className='w-[95vw] mx-auto mb-5'>
         <h1 className='text-5xl font-bold'>Why Us?</h1>
       </div>
-      <div className='grid grid-cols-3'>
+      <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
         {whyChooseUs.map((item, i) => (
           <WhyUsCard data={item} key={i}></WhyUsCard>
         ))}
