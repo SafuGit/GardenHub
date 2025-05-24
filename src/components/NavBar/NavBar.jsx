@@ -76,12 +76,12 @@ const NavBar = () => {
         <ThemeChange></ThemeChange>
         {user ? <div>
           <div className="avatar group relative flex flex-col items-center">
-            <div className="w-12 rounded-full">
+            <div className="w-12 rounded-full hover:cursor-pointer">
               <img src={user.photoURL} referrerPolicy="no-referrer"/>
             </div>
             <div className='group-hover:opacity-100 opacity-0'>
               <p className='absolute top-16 right-0 bg-base-200 p-1 rounded-xl truncate'>{user.displayName}</p>
-              <button className='btn btn-error absolute top-25 right-0' onClick={handleSignOut}>LogOut <BiLogOut></BiLogOut></button>
+              <button className='btn btn-error absolute top-25 right-0' id='logoutBtn' onClick={handleSignOut}>LogOut <BiLogOut></BiLogOut></button>
             </div>
           </div>
         </div> : <Link className="btn btn-info" to={'/login'}>Login</Link>}

@@ -1,10 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaThumbsUp } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { useLoaderData } from 'react-router';
+import Swal from 'sweetalert2';
 
 const TipDetails = () => {
+  const [liked, setLiked] = useState(false);
+
+  const handleSetLiked = (id) => {
+    fetch(`http://localhost:3000/tips/like/${id}`, {
+      method: 'PUT',
+    }).then(res => res.json())
+      // eslint-disable-next-line no-unused-vars
+      .then(data => {
+        Swal.fire({
+          title: 'Tip Liked!',
+          icon: 'success',
+          background: '#1e1e1e',
+          color: '#a0ffb0', 
+          iconColor: '#00ff88', 
+          confirmButtonColor: '#00c472', 
+          customClass: {
+            popup: 'my-swal-dark'
+          }
+        }).then(result => {
+          if (result.isConfirmed) {
+            location.reload();
+          }
+        }) 
+        setLiked(true);
+      })
+  }
+
   const data = useLoaderData();
   console.log(data);
   return (
@@ -49,7 +77,7 @@ const TipDetails = () => {
               <p>{data.userEmail}</p>
             </div>
           </div>
-          <button className='btn btn-secondary w-full mt-8 text-2xl'>Like <FaThumbsUp></FaThumbsUp></button>
+          {liked ? <button className='btn bg-gray-700 w-full mt-8 text-2xl'>Already Liked <FaThumbsUp></FaThumbsUp></button> : <button className='btn btn-secondary w-full mt-8 text-2xl' onClick={() => handleSetLiked(data._id)}>Like <FaThumbsUp></FaThumbsUp></button>}
         </div>
       </div>
     </>

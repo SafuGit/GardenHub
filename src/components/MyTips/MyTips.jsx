@@ -54,6 +54,7 @@ const MyTips = () => {
                   popup: 'my-swal-dark'
                 }
               })
+              location.reload();
             }
           })
       }

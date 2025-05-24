@@ -21,7 +21,8 @@ const ShareTip = () => {
       availability: availability,
       userName: user.displayName,
       userEmail: user.email,
-      imageURL: imageURL
+      imageURL: imageURL,
+      totalLikes: 0,
     }
 
     fetch('http://localhost:3000/tips', {
@@ -43,6 +44,10 @@ const ShareTip = () => {
           confirmButtonColor: '#00c472', 
           customClass: {
             popup: 'my-swal-dark'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            location.reload();
           }
         })
         form.reset();

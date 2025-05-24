@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { FaThumbsUp } from 'react-icons/fa6';
 import { MdPerson } from 'react-icons/md';
 
 const TrendingTips = ({tipsPromise}) => {
@@ -11,6 +12,7 @@ const TrendingTips = ({tipsPromise}) => {
             <tr>
               <th>Image</th>
               <th>Title</th>
+              <th>Likes</th>
               <th><div className='flex gap-2 items-center'>Gardener <MdPerson className='text-xl'></MdPerson></div></th>
               <th>Category</th>
             </tr>
@@ -22,6 +24,7 @@ const TrendingTips = ({tipsPromise}) => {
                   <img src={tip.imageURL} className='w-36 rounded-xl' alt="" />
                 </td>
                 <td className='font-bold text-lg'>{tip.title}</td>
+                <td className='text-xl font-bold'>{tip.totalLikes} </td>
                 <td className='text-lg'>{tip.userName}</td>
                 <td className='font-medium text-md'>
                   <select className='select' defaultValue={tip.category}>

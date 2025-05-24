@@ -44,7 +44,6 @@ const Register = () => {
             popup: 'my-swal-dark'
           }
         });
-        navigate('/');
       })
   }
 

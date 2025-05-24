@@ -1,13 +1,19 @@
 import React from 'react';
+import { BiPhoneCall } from 'react-icons/bi';
 
 const Footer = () => {
   return (
     <div className='mt-20'>
       <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
-        <aside className="grid-flow-col items-center">
-          <img className='w-10 rounded-full' src="/assets/GardenLogo2.png" alt="" />
-          <h1 className='text-xl'>🌿<span className='text-yellow-600'>Garden</span>Hub</h1>
-          <p>Copyright © {new Date().getFullYear()} - SAFWAN SADID</p>
+        <aside className="flex flex-col">
+          <div className='flex items-center gap-2'>
+            <img className='w-10 rounded-full' src="/assets/GardenLogo2.png" alt="" />
+            <h1 className='text-xl'>🌿<span className='text-yellow-600'>Garden</span>Hub</h1>
+          </div>
+          <div>
+            <p>Copyright © {new Date().getFullYear()} - SAFWAN SADID</p>
+            <h1 className='text-lg flex gap-2 items-center'><BiPhoneCall></BiPhoneCall>01981575920</h1>
+          </div>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
