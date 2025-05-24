@@ -7,6 +7,7 @@ import { BiStar } from 'react-icons/bi';
 import { BsStarFill } from 'react-icons/bs';
 import { IoLocation } from 'react-icons/io5';
 import { TbOld } from 'react-icons/tb';
+import { Tooltip } from 'react-tooltip';
 
 const ActiveGardeningCard = ({gardener}) => {
   return (
@@ -36,12 +37,13 @@ const ActiveGardeningCard = ({gardener}) => {
         </p>
         <div className='flex gap-2'>
           <div className='badge bg-yellow-300 text-black font-bold'>{gardener.rating} <BsStarFill></BsStarFill></div>
-          <div className='badge badge-info font-semibold'>{gardener.totalSharedTips} 💡</div>
+          <div className='badge badge-info font-semibold' data-tooltip-id='totalTipsTooltip' data-tooltip-content={`Total Tips Shared by ${gardener.name}`}>{gardener.totalSharedTips} 💡</div>
         </div>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">View Profile</button>
         </div>
       </div>
+      <Tooltip id='totalTipsTooltip'></Tooltip>
     </div>
   );
 };
