@@ -5,6 +5,7 @@ import Loading from '../Loading/Loading';
 import Hero from '../Hero/Hero';
 import ActiveGardeners from '../ActiveGardeners/ActiveGardeners';
 import TrendingTips from '../TrendingTips/TrendingTips';
+import WhyUs from '../WhyUs/WhyUs';
 
 const eventsPromise = fetch('/events.json')
   .then(res => res.json());
@@ -31,6 +32,7 @@ const Home = () => {
       <Suspense fallback={<Loading></Loading>}>
         <TrendingTips tipsPromise={tipsPromise}></TrendingTips>
       </Suspense>
+      <WhyUs></WhyUs>
     </div>
   );
 };
