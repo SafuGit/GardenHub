@@ -11,7 +11,7 @@ const BrowseTips = () => {
       .then(res => res.json())
       .then(resultData => {
         setDataState(resultData);
-        console.log(resultData);
+        // console.log(resultData);
       })
   }
 

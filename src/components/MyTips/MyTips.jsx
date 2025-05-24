@@ -17,14 +17,14 @@ const MyTips = () => {
         .then(res => res.json())
         .then(resultData => {
           setData(resultData);
-          console.log(resultData);
+          // console.log(resultData);
         })
         .catch(err => console.error('Fetch error:', err));
     }
   }, [loading, user]);
 
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
 
     Swal.fire({
       title: 'Are you sure?',

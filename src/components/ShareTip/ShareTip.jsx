@@ -33,8 +33,9 @@ const ShareTip = () => {
       body: JSON.stringify(tip)
     })
       .then(res => res.json())
+      // eslint-disable-next-line no-unused-vars
       .then(data => {
-        console.log("after adding tip", data);
+        // console.log("after adding tip", data);
         Swal.fire({
           title: 'Tip Added Successfully!',
           icon: 'success',

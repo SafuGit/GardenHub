@@ -32,7 +32,7 @@ const UpdateTips = () => {
       imageURL: imageURL
     }
 
-    console.log(tip);
+    // console.log(tip);
 
     fetch(`http://localhost:3000/tips/${data._id}`, {
       method: 'PUT',
@@ -42,8 +42,9 @@ const UpdateTips = () => {
       body: JSON.stringify(tip)
     })
       .then(res => res.json())
+      // eslint-disable-next-line no-unused-vars
       .then(data => {
-        console.log("after updating tip", data);
+        // console.log("after updating tip", data);
         Swal.fire({
           title: 'Tip Updated Successfully!',
           icon: 'success',

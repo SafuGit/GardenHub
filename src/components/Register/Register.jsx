@@ -13,7 +13,7 @@ const Register = () => {
     const form = e.target;
     const formData = new FormData(form);
     const [name, email, photoURL, password] = [formData.get('name'), formData.get('email'), formData.get('photoURL'), formData.get('password')];
-    console.log(name, email, photoURL, password);
+    // console.log(name, email, photoURL, password);
 
     createUser(email, password)
       .then(result => {
@@ -33,7 +33,7 @@ const Register = () => {
         })
         navigate('/');
       }).catch(error => {
-        console.log(error);
+        // console.log(error);
         Swal.fire({
           title: error.message,
           icon: 'error',
@@ -65,7 +65,7 @@ const Register = () => {
         })
         navigate('/');
       }).catch(error => {
-        console.log(error);
+        // console.log(error);
         Swal.fire({
           title: error.message,
           icon: 'error',

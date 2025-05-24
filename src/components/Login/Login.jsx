@@ -11,8 +11,9 @@ const Login = () => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
+    // eslint-disable-next-line no-unused-vars
     const [name, email, photoURL, password] = [formData.get('name'), formData.get('email'), formData.get('photoURL'), formData.get('password')];
-    console.log(name, email, photoURL, password);
+    // console.log(name, email, photoURL, password);
 
     signInWithEmail(email, password)
       .then(result => {
@@ -32,7 +33,7 @@ const Login = () => {
         })
         navigate('/');
       }).catch(error => {
-        console.log(error);
+        // console.log(error);
         Swal.fire({
           title: error.message,
           icon: 'error',
@@ -65,7 +66,7 @@ const Login = () => {
         })
         navigate('/');
       }).catch(error => {
-        console.log(error);
+        // console.log(error);
         Swal.fire({
           title: error.message,
           icon: 'error',

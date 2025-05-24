@@ -34,7 +34,7 @@ const TipDetails = () => {
   }
 
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className='w-[80vw] mx-auto mb-4'>
