@@ -5,6 +5,22 @@
 - https://safu-a10.web.app/
 ## Description
 A platform for gardening enthusiasts to share tips, find local gardeners, ask plant care questions, post or join gardening events, and connect over shared interests like composting, hydroponics, balcony gardens, etc.
+
+## Features
+- **TIP SHARING**: Share tips with Others
+- **CRUD FUNCTIONALITIES**: Use crud to Create, Update & Delete tips and many more things.
+- **FIREBASE AUTH**: Authentication made possible through Firebase.
+
+## Tech Stack
+Frontend: React, React Router, DaisyUI, TailwindCSS.
+Backend: NodeJS, Express, MongoDB, Firebase
+
+## How to Run/Deploy
+- Clone this github repository to your local machine.
+- Run "npm install" first to install all the packages.
+- Run "npm run dev" to run the app in development mode.
+- Run "npm run build" to build the app, The build will be in the dist folder. You can preview with "npm run preview".
+
 ## Packages Used
 
 ```
@@ -22,6 +38,10 @@ A platform for gardening enthusiasts to share tips, find local gardeners, ask pl
 "tailwindcss": "^4.1.7",
 "theme-change": "^2.5.0"
 ```
+
+## Screenshot
+![image](https://github.com/user-attachments/assets/6d1dff50-b1fd-46de-813e-8c7a31b50fe6)
+
 
 # React + Vite
 
