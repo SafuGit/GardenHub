@@ -1,8 +1,11 @@
 import React from 'react';
 import { BiPhoneCall } from 'react-icons/bi';
+import { useLocation } from 'react-router';
 
 const Footer = () => {
-  const isDashboard = window.location.pathname.includes('/dashboard');
+  const location = useLocation();
+  const isDashboard = location.pathname.startsWith('/dashboard');
+  // console.log(isDashboard);
   return (
     <div className={ isDashboard ? '' : 'mt-20'}>
       <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
