@@ -16,12 +16,36 @@ import MyTips from './components/MyTips/MyTips'
 import Loading from './components/Loading/Loading'
 import UpdateTips from './components/UpdateTips/UpdateTips'
 import ExploreGardeners from './components/ExploreGardeners/ExploreGardeners'
+import Dashboard from './components/Dashboard/Dashboard'
+import Overview from './components/Dashboard/Overview/Overview'
 
 const router = createBrowserRouter([
   {path: '/', Component: Root, children: [
     {index: true, Component: Home},
     {path: '/login', Component: Login},
     {path: '/register', Component: Register},
+    {
+      path: '/dashboard', Component: Dashboard, children: [
+        {
+          index: true, 
+          element: <PrivateRoute>
+            <Overview></Overview>
+          </PrivateRoute>,
+          loader: async () => {
+            const gardenersPromise = fetch('https://gardenhub-server-nine.vercel.app/gardeners').then(res => res.json());
+            const tipsPromise = fetch('https://gardenhub-server-nine.vercel.app/tips/public').then(res => res.json());
+
+            const [gardeners, tips] = await Promise.all([gardenersPromise, tipsPromise]);
+
+            return {
+              gardenersCount: gardeners.length,
+              tipsCount: tips.length
+            };
+          }
+        },
+
+      ]
+    },
     {
       path: '/shareTip', 
       element: <PrivateRoute>

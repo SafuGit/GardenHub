@@ -8,7 +8,7 @@ import ThemeChange from '../ThemeChange/ThemeChange';
 const NavBar = () => {
   const {user, logOut} = use(AuthContext);
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '/gardeners';
+  const isHomePage = location.pathname === '/' || location.pathname === '/gardeners' || location.pathname === '/dashboard';
 
   const handleSignOut = () => {
     logOut()

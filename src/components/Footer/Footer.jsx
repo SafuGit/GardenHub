@@ -2,8 +2,9 @@ import React from 'react';
 import { BiPhoneCall } from 'react-icons/bi';
 
 const Footer = () => {
+  const isDashboard = window.location.pathname.includes('/dashboard');
   return (
-    <div className='mt-20'>
+    <div className={ isDashboard ? '' : 'mt-20'}>
       <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
         <aside className="flex flex-col">
           <div className='flex items-center gap-2'>

@@ -28,7 +28,7 @@ const ActiveGardeningCard = ({gardener}) => {
           </div>
           {gardener.status == 'active' ? <div className='badge badge-success'>ACTIVE</div> : <div className='badge badge-error'>INACTIVE</div>}
         </div>
-        <p>
+        <p className='text-gray-300 text-sm'>
           {gardener.bio} <br /> <br />
           <span className='flex flex-col gap-1'>
             <span className='flex gap-1 items-end text-red-50 font-medium'>
@@ -39,9 +39,6 @@ const ActiveGardeningCard = ({gardener}) => {
         <div className='flex gap-2'>
           <div className='badge bg-yellow-300 text-black font-bold'>{gardener.rating} <BsStarFill></BsStarFill></div>
           <div className='badge badge-info font-semibold' data-tooltip-id='totalTipsTooltip' data-tooltip-content={`Total Tips Shared by ${gardener.name}`}>{gardener.totalSharedTips} 💡</div>
-        </div>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">View Profile</button>
         </div>
       </div>
       <Tooltip id='totalTipsTooltip'></Tooltip>
