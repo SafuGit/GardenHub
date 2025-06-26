@@ -8,7 +8,7 @@ const TotalTipsCard = ({count}) => {
         <p className='text-sm'>Gardeners</p>
       </div>
       <div>
-        <svg viewBox="0 0 100 40" className="w-32 h-12">
+        <svg viewBox="0 0 100 40" className="w-36 h-12">
           <polyline
             fill="none"
             stroke="white"
