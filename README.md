@@ -1,4 +1,3 @@
-adwawd
 # GardenHub
 *A Gardening app with many features such as Tip Sharing, Connections with Gardeners etc.*
 ## Live URL
