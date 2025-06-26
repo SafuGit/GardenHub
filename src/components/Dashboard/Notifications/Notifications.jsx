@@ -43,7 +43,7 @@ const notifications = [
 const Notifications = () => {
   return (
     <div className='mt-4 col-span-3'>
-      <ul className="list bg-base-200 rounded-box shadow-md">
+      <ul className="list bg-base-100 rounded-box shadow-md">
         <li className="p-4 pb-2 text-xs opacity-60 tracking-wide flex items-center gap-2"> <span className='text-xl'> <BiBell></BiBell> </span> Notifications this week</li>
 
         {notifications.map((notification, index) => (

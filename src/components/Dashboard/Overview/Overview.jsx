@@ -5,15 +5,19 @@ import TotalGardenersCard from '../OverviewCards/TotalGardenersCard';
 import TotalTipsCard from '../OverviewCards/TotalTipsCard';
 import Notifications from '../Notifications/Notifications';
 import TotalLikesCard from '../OverviewCards/TotalLikesCard';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 const Overview = () => {
   const stats = useLoaderData();
   console.log(stats);
 
   return (
-    <div className='flex gap-4'>
-      <div className='flex flex-col'>
-        <div className='grid grid-cols-3'>
+    <div className='flex' style={{
+      backgroundImage: "url('/assets/radar.png')",
+    }}>
+      <div className='flex flex-col p-12'>
+        <div className='grid grid-cols-4'>
           <div className='flex justify-between col-span-3'>
             <TotalGardenersCard count={stats.gardenersCount}></TotalGardenersCard>
             <TotalTipsCard count={stats.tipsCount}></TotalTipsCard>
@@ -23,7 +27,6 @@ const Overview = () => {
           <Notifications></Notifications>
         </div>
       </div>
-
     </div>
   );
 };
