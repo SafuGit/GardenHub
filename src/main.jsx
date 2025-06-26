@@ -37,9 +37,15 @@ const router = createBrowserRouter([
 
             const [gardeners, tips] = await Promise.all([gardenersPromise, tipsPromise]);
 
+            let likes = 0;
+            for (const tip of tips) {
+              likes += tip.totalLikes;
+            }
+
             return {
               gardenersCount: gardeners.length,
-              tipsCount: tips.length
+              tipsCount: tips.length,
+              totalLikes: likes,
             };
           }
         },

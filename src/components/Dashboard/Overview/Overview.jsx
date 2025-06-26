@@ -4,18 +4,20 @@ import { useLoaderData } from 'react-router';
 import TotalGardenersCard from '../OverviewCards/TotalGardenersCard';
 import TotalTipsCard from '../OverviewCards/TotalTipsCard';
 import Notifications from '../Notifications/Notifications';
+import TotalLikesCard from '../OverviewCards/TotalLikesCard';
 
 const Overview = () => {
   const stats = useLoaderData();
-  // console.log(stats);
+  console.log(stats);
 
   return (
     <div className='flex gap-4'>
       <div className='flex flex-col'>
         <div className='grid grid-cols-3'>
-          <div className='flex justify-between col-span-2'>
+          <div className='flex justify-between col-span-3'>
             <TotalGardenersCard count={stats.gardenersCount}></TotalGardenersCard>
             <TotalTipsCard count={stats.tipsCount}></TotalTipsCard>
+            <TotalLikesCard count={stats.totalLikes}></TotalLikesCard>
           </div>
           <UserCard></UserCard>
           <Notifications></Notifications>
