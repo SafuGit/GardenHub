@@ -22,16 +22,17 @@ const SliderComp = ({data}) => {
       <Slider {...settings}>
         {data.map((item, i) => (
           <div key={i}>
-            <h1 className='font-bold text-3xl text-center'>{item.title}</h1>
-            <div className='flex gap-1'><IoLocation className='text-xl text-red-400'></IoLocation> {item.location}</div>
-            <p className='text-gray-400'>{item.subtitle}</p>
-            <div className='min-h-[70vh] rounded-xl flex justify-center items-end' style={{
+            <div className='min-h-[70vh] rounded-xl flex flex-col justify-end items-center' style={{
               backgroundImage: `url(${item.backgroundImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}>
-              <button className='btn btn-primary mb-8'>Learn More</button>
+              <div className='bg-gray-900 p-4 rounded-xl mb-4'>
+                <h1 className='font-bold text-3xl text-center'>{item.title}</h1>
+                <div className='flex gap-1'><IoLocation className='text-xl text-red-400'></IoLocation> {item.location}</div>
+                <p className='text-gray-400'>{item.subtitle}</p>
+              </div>
             </div>
           </div>
         ))}
