@@ -37,10 +37,10 @@ const TipDetails = () => {
   // console.log(data);
   return (
     <>
-      <div className='w-[80vw] mx-auto mb-4'>
+      <div className='w-[80%] mt-10 mx-auto mb-4'>
         <h1 className='text-3xl font-bold text-gray-200 italic'>{data.title}</h1>
       </div>
-      <div className='w-[80vw] bg-base-200 rounded-xl flex flex-col mx-auto p-8'>
+      <div className='w-[80%] my-10 bg-base-200 rounded-xl flex flex-col mx-auto p-8'>
         <div>
           <img src={data.imageURL} alt="" className='rounded-lg' />
         </div>

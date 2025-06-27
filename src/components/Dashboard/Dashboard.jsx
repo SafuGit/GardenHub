@@ -10,7 +10,7 @@ const Dashboard = () => {
   const navItems = <>
     <li><Link to={'/dashboard'}>Overview</Link></li>
     <li><NavLink to={'/dashboard/browseTips'}>Browse Tips</NavLink></li> 
-    <li><NavLink to={'/dashboard/shareTip'}>Share a Garden Trip</NavLink></li>
+    <li><NavLink to={'/dashboard/shareTip'}>Share a Garden Tip</NavLink></li>
     <li><NavLink to={'/dashboard/myTips'}>My Tips</NavLink></li>
   </>
 

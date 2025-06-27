@@ -47,7 +47,7 @@ const BrowseTips = () => {
                     <option defaultChecked>{tip.category}</option>
                   </select>
                   </td>
-                <td><Link to={`/tips/${tip._id}`} className='btn btn-primary font-bold'>See More <GoEye></GoEye></Link></td>
+                <td><Link to={`/dashboard/tips/${tip._id}`} className='btn btn-primary font-bold'>See More <GoEye></GoEye></Link></td>
               </tr>
             ))}
           </tbody>
