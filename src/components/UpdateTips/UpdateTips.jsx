@@ -62,7 +62,7 @@ const UpdateTips = () => {
 
   return (
     <>
-      <div className='bgUpdate border border-black p-8 rounded-xl w-[95vw] mx-auto'>
+      <div className='bgUpdate border border-black p-8 rounded-xl w-[90%] my-10 mx-auto'>
         <h1 className='text-3xl font-bold text-center mb-4'>Update Tip</h1>
         <form className='grid grid-cols-2 mt-8' onSubmit={handleUpdateTip}>
           <div className='flex flex-col w-full'>

@@ -62,7 +62,7 @@ const MyTips = () => {
   }
 
   return (
-    <div className='w-[95vw] mx-auto'>
+    <div className='w-[90%] my-10 mx-auto'>
       <h1 className='text-3xl font-bold mb-4'>Your Tips 💡</h1>
       <div className='overflow-x-auto rounded-box border border-base-content/50 bg-base-200 mt-4'>
         <table className='table'>
@@ -99,7 +99,7 @@ const MyTips = () => {
                     {tip.availability == 'public' ? <div className='badge badge-success text-black'>Public <BsEye></BsEye></div> : <div className='badge badge-error'>Private <BiLock></BiLock></div>}
                   </td>
                   <td>
-                    <Link to={`/updateTips/${tip._id}`} className='btn btn-warning text-xl rounded-lg mr-2'><BiEdit></BiEdit></Link>
+                    <Link to={`/dashboard/updateTips/${tip._id}`} className='btn btn-warning text-xl rounded-lg mb-2'><BiEdit></BiEdit></Link>
                     <button className='btn btn-error text-xl rounded-lg' onClick={() => handleDelete(tip._id)}><MdDelete></MdDelete></button>
                   </td>
               </tr>

@@ -16,7 +16,7 @@ const BrowseTips = () => {
   }
 
   return (
-    <div className='w-[95vw] mx-auto'>
+    <div className='w-[90%] my-10 mx-auto'>
       <div className='flex justify-between items-end'>
         <h1 className='text-3xl font-bold text-white'>Browse Tips</h1>
         <ul className="menu sm:menu-horizontal menu-vertical bg-base-200 rounded-box gap-2">

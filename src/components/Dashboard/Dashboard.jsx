@@ -8,7 +8,7 @@ const Dashboard = () => {
   // const {user} = use(AuthContext);
   const navigation = useNavigation();
   const navItems = <>
-    {/* <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li> */}
+    <li><Link to={'/dashboard'}>Overview</Link></li>
     <li><NavLink to={'/dashboard/browseTips'}>Browse Tips</NavLink></li> 
     <li><NavLink to={'/dashboard/shareTip'}>Share a Garden Trip</NavLink></li>
     <li><NavLink to={'/dashboard/myTips'}>My Tips</NavLink></li>

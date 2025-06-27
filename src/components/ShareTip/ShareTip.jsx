@@ -56,7 +56,7 @@ const ShareTip = () => {
   }
 
   return (
-    <div className='w-[95vw] mx-auto rounded-xl p-8 bg-base-300 border-black border-2 bg'>
+    <div className='w-[90%] my-10 mx-auto rounded-xl p-8 bg-base-300 border-black border-2 bg'>
       <div className='text-center'>
         <h1 className='text-3xl font-bold'>Share a Tip 💡</h1>
         <p className='opacity-50 text-white'>Sharing tips is a great way to help others, It can benefit other gardeners as well. <br /> We at GardenHub immensely value your opinion and tricks. </p>
