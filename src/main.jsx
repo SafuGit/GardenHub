@@ -52,39 +52,38 @@ const router = createBrowserRouter([
             };
           }
         },
-
+        {
+          path: '/dashboard/myTips',
+          element: <PrivateRoute>
+            <MyTips></MyTips>
+          </PrivateRoute>
+        },
+        {
+          path: '/dashboard/shareTip', 
+          element: <PrivateRoute>
+            <ShareTip></ShareTip>
+          </PrivateRoute>,
+          hydrateFallbackElement: <Loading></Loading>
+        },
+        {
+          path: '/dashboard/browseTips',
+          Component: BrowseTips,
+          loader: () => fetch('https://gardenhub-server-nine.vercel.app/tips/public'),
+          hydrateFallbackElement: <Loading></Loading>
+        },
+        {
+          path: '/dashboard/tips/:id',
+          Component: TipDetails,
+          loader: async ({params}) => fetch(`https://gardenhub-server-nine.vercel.app/tips/${params.id}`),
+          hydrateFallbackElement: <Loading></Loading>
+        },
+        {
+          path: '/dashboard/updateTips/:id',
+          Component: UpdateTips,
+          loader: async ({params}) => fetch(`https://gardenhub-server-nine.vercel.app/tips/${params.id}`),
+          hydrateFallbackElement: <Loading></Loading>
+        },
       ]
-    },
-    {
-      path: '/shareTip', 
-      element: <PrivateRoute>
-        <ShareTip></ShareTip>
-      </PrivateRoute>,
-      hydrateFallbackElement: <Loading></Loading>
-    },
-    {
-      path: '/browseTips',
-      Component: BrowseTips,
-      loader: () => fetch('https://gardenhub-server-nine.vercel.app/tips/public'),
-      hydrateFallbackElement: <Loading></Loading>
-    },
-    {
-      path: 'tips/:id',
-      Component: TipDetails,
-      loader: async ({params}) => fetch(`https://gardenhub-server-nine.vercel.app/tips/${params.id}`),
-      hydrateFallbackElement: <Loading></Loading>
-    },
-    {
-      path: '/myTips',
-      element: <PrivateRoute>
-        <MyTips></MyTips>
-      </PrivateRoute>
-    },
-    {
-      path: 'updateTips/:id',
-      Component: UpdateTips,
-      loader: async ({params}) => fetch(`https://gardenhub-server-nine.vercel.app/tips/${params.id}`),
-      hydrateFallbackElement: <Loading></Loading>
     },
     {
       path: '/gardeners',

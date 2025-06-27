@@ -1,5 +1,5 @@
 // import React, { use } from 'react';
-import { Link, Outlet, useNavigation } from 'react-router';
+import { Link, NavLink, Outlet, useNavigation } from 'react-router';
 import { AuthContext } from '../../contexts/AuthContext';
 import Loading from '../Loading/Loading';
 import { BiMenu } from 'react-icons/bi';
@@ -7,6 +7,12 @@ import { BiMenu } from 'react-icons/bi';
 const Dashboard = () => {
   // const {user} = use(AuthContext);
   const navigation = useNavigation();
+  const navItems = <>
+    {/* <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li> */}
+    <li><NavLink to={'/dashboard/browseTips'}>Browse Tips</NavLink></li> 
+    <li><NavLink to={'/dashboard/shareTip'}>Share a Garden Trip</NavLink></li>
+    <li><NavLink to={'/dashboard/myTips'}>My Tips</NavLink></li>
+  </>
 
   return (
     <div className="drawer md:drawer-open">
@@ -24,7 +30,7 @@ const Dashboard = () => {
         <ul className="menu bg-base-200 text-base-content min-h-full w-60 p-4 text-lg">
           <h1 className='text-center italic text-3xl'>DASHBOARD</h1>
           <div className='divider divider-vertical mt-0 mb-1'></div>
-          <li><Link to={''}>Add Marathon</Link></li>
+          {navItems}
           {/* <li><Link to={`myMarathons/${user.email}`}>My Marathons</Link></li>
           <li><Link to={`myApplications/${user.email}`}>My Apply List</Link></li> */}
         </ul>

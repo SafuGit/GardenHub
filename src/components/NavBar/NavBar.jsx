@@ -8,12 +8,13 @@ import ThemeChange from '../ThemeChange/ThemeChange';
 const NavBar = () => {
   const {user, logOut} = use(AuthContext);
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '/gardeners' || location.pathname === '/dashboard';
+  const isHomePage = location.pathname === '/' || location.pathname === '/gardeners' || location.pathname.includes('/dashboard');
 
   const navItems = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/exploreGardeners'}>All Gardeners</NavLink></li>
+    <li><NavLink to={'/gardeners'}>All Gardeners</NavLink></li>
     <li><NavLink to={'/aboutUs'}>About Us</NavLink></li>
+    <li><NavLink to={'/contactUs'}>Contact Us</NavLink></li>
   </>
 
   const handleSignOut = () => {
@@ -71,12 +72,10 @@ const NavBar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><NavLink to={'/'}>Home</NavLink></li>
-          <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
-          <li><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
-          {user ? <div className='flex'> 
-            <li><NavLink to={'/shareTip'}>Share a Garden Trip</NavLink></li>
-            <li><NavLink to={'/myTips'}>My Tips</NavLink></li> </div> : ""}
+          {navItems}
+          {user ? <li>
+            <NavLink to={'/dashboard'}>Dashboard</NavLink>
+          </li> : ""}
         </ul>
       </div>
       <div className="navbar-end sm:mr-[1vw]">
