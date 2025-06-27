@@ -20,7 +20,7 @@ const whyChooseUs = [
 const WhyUs = () => {
   return (
     <div className='w-full mx-auto mt-20 p-12' id='why-us'>
-      <div className='w-[95vw] mx-auto mb-5'>
+      <div className='w-full mx-auto mb-5'>
         <h1 className='text-5xl font-bold'>Why Us?</h1>
       </div>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>

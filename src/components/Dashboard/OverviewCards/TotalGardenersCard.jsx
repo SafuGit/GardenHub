@@ -2,7 +2,7 @@ import React from 'react';
 
 const TotalGardenersCard = ({count}) => {
   return (
-    <div className='p-4 rounded-xl shadow-lg flex flex-col gap-4 w-[30%] mb-4 bg-gradient-to-t from-purple-950 to-purple-700 border border-gray-600'>
+    <div className='p-4 rounded-xl shadow-lg flex flex-col gap-4 w-[30%] truncate mb-4 bg-gradient-to-t from-purple-950 to-purple-700 border border-gray-600'>
       <div>
         <h1 className='text-2xl'>{count}</h1>
         <p className='text-sm'>Gardeners 🏡</p>

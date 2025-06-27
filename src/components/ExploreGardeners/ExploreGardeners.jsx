@@ -25,8 +25,8 @@ const ExploreGardeners = () => {
         })
         .catch(err => console.error('Fetch error:', err));
     }
-    console.log(data);
-    console.log(sortParam);
+    // console.log(data);
+    // console.log(sortParam);
   }
 
   const handleFilter = (ageGroup) => {
@@ -48,7 +48,7 @@ const ExploreGardeners = () => {
         <button className='text-3xl btn btn-ghost btn-circle mr-1' onClick={handleSort}><BiSort></BiSort></button>
         <button className='text-3xl btn btn-ghost btn-circle' popoverTarget="popover-1" style={{ anchorName: "--anchor-1" }}><FiFilter></FiFilter></button>
 
-        <ul className="dropdown menu w-52 rounded-box bg-base-200 shadow-sm"
+        <ul className="dropdown menu w-fit rounded-box bg-base-200 shadow-sm"
           popover="auto" id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */ }>
           <h1 className='text-2xl text-center'>AGE</h1>
           <div className='divider divider-vertical mt-0 mb-1'></div>
@@ -58,7 +58,7 @@ const ExploreGardeners = () => {
           <li onClick={() => handleFilter('50plus')}><a>Over 30</a></li>
         </ul>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[1215px]:grid-cols-4 gap-12 mt-10'>
         {data.map((gardener, i) => (
           <ActiveGardeningCard key={i} gardener={gardener}></ActiveGardeningCard>
         ))}

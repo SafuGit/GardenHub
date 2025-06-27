@@ -90,7 +90,7 @@ const NavBar = () => {
               <button className='btn btn-error absolute top-25 right-0' id='logoutBtn' onClick={handleSignOut}>LogOut <BiLogOut></BiLogOut></button>
             </div>
           </div>
-        </div> : <Link className="btn btn-info" to={'/login'}>Login</Link>}
+        </div> : <Link className="btn btn-xs sm:btn-md btn-info" to={'/login'}>Login</Link>}
       </div>
     </div>
   );
