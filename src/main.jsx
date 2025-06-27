@@ -21,6 +21,7 @@ import Overview from './components/Dashboard/Overview/Overview'
 import { BiPhone } from 'react-icons/bi'
 import { CgMail } from 'react-icons/cg'
 import Swal from 'sweetalert2'
+import GardenerDetail from './components/GardenerDetails/GardenerDetail'
 
 const router = createBrowserRouter([
   {path: '/', Component: Root, children: [
@@ -89,6 +90,12 @@ const router = createBrowserRouter([
       path: '/gardeners',
       Component: ExploreGardeners,
       loader: () => fetch('https://gardenhub-server-nine.vercel.app/gardeners'),
+      hydrateFallbackElement: <Loading></Loading>
+    },
+    {
+      path: '/gardener/:id',
+      loader: ({params}) => fetch(`https://gardenhub-server-nine.vercel.app/gardeners/${params.id}`),
+      Component: GardenerDetail,
       hydrateFallbackElement: <Loading></Loading>
     },
     {

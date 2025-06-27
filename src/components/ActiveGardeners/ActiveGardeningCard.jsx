@@ -8,6 +8,7 @@ import { BsStarFill } from 'react-icons/bs';
 import { IoLocation } from 'react-icons/io5';
 import { TbOld } from 'react-icons/tb';
 import { Tooltip } from 'react-tooltip';
+import { Link } from 'react-router';
 
 const ActiveGardeningCard = ({gardener}) => {
   return (
@@ -40,6 +41,7 @@ const ActiveGardeningCard = ({gardener}) => {
           <div className='badge bg-yellow-300 text-black font-bold'>{gardener.rating} <BsStarFill></BsStarFill></div>
           <div className='badge badge-info font-semibold' data-tooltip-id='totalTipsTooltip' data-tooltip-content={`Total Tips Shared by ${gardener.name}`}>{gardener.totalSharedTips} 💡</div>
         </div>
+        <Link to={`/gardener/${gardener._id}`} className='btn btn-primary mt-8'>View Details</Link>
       </div>
       <Tooltip id='totalTipsTooltip'></Tooltip>
     </div>

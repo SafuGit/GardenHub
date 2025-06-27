@@ -8,7 +8,7 @@ import ThemeChange from '../ThemeChange/ThemeChange';
 const NavBar = () => {
   const {user, logOut} = use(AuthContext);
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '/gardeners' || location.pathname.includes('/dashboard');
+  const isHomePage = location.pathname === '/' || location.pathname === '/gardeners' || location.pathname.includes('/dashboard') || location.pathname.includes('/gardener')
 
   const navItems = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
