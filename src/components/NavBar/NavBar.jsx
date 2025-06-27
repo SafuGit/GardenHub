@@ -47,7 +47,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className={`navbar bg-base-200 shadow-sm border-base-300 border-b ${isHomePage ? "" : "mb-20"}`}>
+    <div className={`navbar bg-base-200 shadow-sm border-base-300 border-b sticky top-0 z-50 ${isHomePage ? "" : "mb-20"}`}>
       <div className="navbar-start ml-[1vw]">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
