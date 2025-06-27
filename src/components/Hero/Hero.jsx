@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Hero = () => {
   return (
     <div
-      className="hero min-h-screen mb-15"
+      className="hero min-h-[80vh] mb-15"
       style={{
         backgroundImage:
           "url(https://beautifulboundarieslawn.com/wp-content/uploads/2019/02/Depositphotos_11104897_xl-2015-scaled-1.jpg)",
@@ -17,7 +17,6 @@ const Hero = () => {
           <p className="mb-5">
             Discover the ultimate companion for plant lovers. Whether you’re growing herbs on a balcony or cultivating a full backyard garden, our app guides and inspires every step of the way. 🌱
           </p>
-          <button className="btn btn-primary">Get Started</button>
         </div>
       </div>
     </div>

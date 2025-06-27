@@ -30,7 +30,7 @@ const ExploreGardeners = () => {
   }
 
   const handleFilter = (ageGroup) => {
-    console.log(`https://gardenhub-server-nine.vercel.app/gardenFilter/age/?age=${ageGroup}`);
+    // console.log(`https://gardenhub-server-nine.vercel.app/gardenFilter/age/?age=${ageGroup}`);
     fetch(`https://gardenhub-server-nine.vercel.app/gardenFilter/age/?age=${ageGroup}`)
       .then(res => res.json())
       .then(filteredData => {
@@ -38,7 +38,7 @@ const ExploreGardeners = () => {
         // console.log(filteredData);
       })
       .catch(err => console.error('Fetch error:', err));
-    console.log(data);
+    // console.log(data);
   }
 
   return (

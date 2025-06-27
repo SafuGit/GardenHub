@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { FaLocationPin } from 'react-icons/fa6';
 import { IoLocation } from 'react-icons/io5';
+import './SliderComp.css';
 
 const SliderComp = ({data}) => {
   const settings = {
@@ -15,10 +16,11 @@ const SliderComp = ({data}) => {
     speed: 500,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    arrows: false,
   }
 
   return (
-    <div className='slider-container'>
+    <div className='slider-container w-full overflow-hidden'>
       <Slider {...settings}>
         {data.map((item, i) => (
           <div key={i}>

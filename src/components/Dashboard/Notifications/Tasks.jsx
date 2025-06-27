@@ -28,9 +28,9 @@ const Tasks = () => {
 							<div>{task}</div>
 							<div className="text-xs uppercase font-semibold opacity-60">{index / 2} Days Ago</div>
 						</div>
-						<button className="btn btn-square btn-ghost">
+						{/* <button className="btn btn-square btn-ghost"> */}
 							<TiTick className='text-2xl'></TiTick>
-						</button>
+						{/* </button> */}
 					</li>
 				))}
 			</ul>

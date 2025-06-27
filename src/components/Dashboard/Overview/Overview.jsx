@@ -30,7 +30,7 @@ const Overview = () => {
           <Notifications></Notifications>
         </div>
       </div>
-      <div className='p-4 hidden md:block'>
+      <div className='p-4 hidden lg:block'>
         <Tasks></Tasks>
       </div>
     </div>

@@ -54,9 +54,9 @@ const Notifications = () => {
               <div>{notification.message}</div>
               <div className="text-xs uppercase font-semibold opacity-60">{notification.type}</div>
             </div>
-            <button className="btn btn-square btn-ghost">
+            {/* <button className="btn btn-square btn-ghost"> */}
               <BiBell className='text-2xl'></BiBell>
-            </button>
+            {/* </button> */}
           </li>
         ))}
       </ul>

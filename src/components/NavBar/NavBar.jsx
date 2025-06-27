@@ -56,12 +56,10 @@ const NavBar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-200  z-1 mt-3 w-52 p-2 shadow">
-            <li><NavLink to={'/'}>Home</NavLink></li>
-            <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
-            <li><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
-            {user ? <div className='flex flex-col'> 
-              <li><NavLink to={'/shareTip'}>Share a Garden Trip</NavLink></li>
-              <li><NavLink to={'/myTips'}>My Tips</NavLink></li> </div> : ""}
+            {navItems}
+            {user ? <li>
+              <NavLink to={'/dashboard'}>Dashboard</NavLink>
+            </li> : ""}
             <ThemeChange></ThemeChange>
           </ul>
         </div>
