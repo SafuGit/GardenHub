@@ -7,6 +7,9 @@ import Notifications from '../Notifications/Notifications';
 import TotalLikesCard from '../OverviewCards/TotalLikesCard';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import Lottie from 'lottie-react';
+import dashboardLottie from '../../../assets/dashboardLottie.json';
+import Tasks from '../Notifications/Tasks';
 
 const Overview = () => {
   const stats = useLoaderData();
@@ -14,10 +17,10 @@ const Overview = () => {
 
   return (
     <div className='flex' style={{
-      backgroundImage: "url('/assets/radar.png')",
+      // backgroundImage: "url('/assets/radar.png')",
     }}>
-      <div className='flex flex-col p-12'>
-        <div className='grid grid-cols-4'>
+      <div className='flex flex-col p-8'>
+        <div className='grid grid-cols-3'>
           <div className='flex justify-between col-span-3'>
             <TotalGardenersCard count={stats.gardenersCount}></TotalGardenersCard>
             <TotalTipsCard count={stats.tipsCount}></TotalTipsCard>
@@ -26,6 +29,9 @@ const Overview = () => {
           <UserCard></UserCard>
           <Notifications></Notifications>
         </div>
+      </div>
+      <div className='p-4 hidden md:block'>
+        <Tasks></Tasks>
       </div>
     </div>
   );
