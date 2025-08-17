@@ -8,12 +8,12 @@ import TotalLikesCard from '../OverviewCards/TotalLikesCard';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import Lottie from 'lottie-react';
-import dashboardLottie from '../../../assets/dashboardLottie.json';
+// import dashboardLottie from '../../../assets/dashboardLottie.json';
 import Tasks from '../Notifications/Tasks';
 
 const Overview = () => {
   const stats = useLoaderData();
-  console.log(stats);
+  // console.log(stats);
 
   return (
     <div className='flex' style={{
