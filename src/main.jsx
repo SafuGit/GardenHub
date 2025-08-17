@@ -117,13 +117,13 @@ const router = createBrowserRouter([
       Component: () => <div className='w-[95vw] mx-auto'>
         <h1 className='text-4xl mb-8'>About Us</h1>
         <div className='flex flex-col md:flex-row gap-4'>
-          <div className='card bg-base-200 shadow-xl p-8 w-fit'>
+          <div className='card bg-base-200 shadow-xl p-8 md:w-[30%]'>
             <h1 className='card-title sm:text-2xl text-xl mb-4'>Give us a call</h1>
-            <p className='flex items-center gap-2'><BiPhone></BiPhone> +8801981575920 <br /> +8801710888010</p>
+            <button className='btn btn-secondary w-fit'>Call Now</button>
           </div>
-          <div className='card bg-base-200 shadow-xl p-8 w-fit'>
+          <div className='card bg-base-200 shadow-xl p-8 md:w-fit'>
             <h1 className='card-title sm:text-2xl text-xl truncate mb-4'>Or Contact through Email</h1>
-            <p className='flex items-center gap-2'><CgMail></CgMail> @safwan55.ah@gmail.com <br /> @safwansadid.ah@gmail.com</p>
+            <button className='btn btn-secondary w-fit'>Email Now</button>
           </div>
           <div className='card bg-base-200 shadow-xl p-8 w-full'>
             <h1 className='card-title sm:text-2xl text-xl mb-2'>Give us some feedback!</h1>

@@ -17,8 +17,8 @@ const Footer = () => {
             <h1 className='text-xl'>🌿<span className='text-yellow-600'>Garden</span>Hub</h1>
           </div>
           <div>
-            <p>Copyright © {new Date().getFullYear()} - SAFWAN SADID</p>
-            <h1 className='text-lg flex gap-2 items-center'><BiPhoneCall></BiPhoneCall>01981575920</h1>
+            <p>Copyright © {new Date().getFullYear()} - GardenHub</p>
+            <h1 className='text-lg flex gap-2 items-center'><BiPhoneCall></BiPhoneCall>+8801710888010</h1>
           </div>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
