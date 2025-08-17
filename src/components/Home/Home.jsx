@@ -24,11 +24,11 @@ const Home = () => {
       {/* <Suspense fallback={<Loading></Loading>}>
         <SliderSection eventsPromise={eventsPromise}></SliderSection>
       </Suspense> */}
-      <SectionTitle title={'Active Gardeners'} className={'italic mt-20 underline text-center'}></SectionTitle>
+      <SectionTitle title={'Active Gardeners'} className={'italic mt-20 text-center'}></SectionTitle>
       <Suspense fallback={<Loading></Loading>}>
         <ActiveGardeners gardenersPromise={gardenersPromise}></ActiveGardeners>
       </Suspense>
-      <SectionTitle title={'Trending Tips'} className={'italic font-bold mt-20 underline'}></SectionTitle>
+      <SectionTitle title={'Trending Tips'} className={'italic font-bold mt-20'}></SectionTitle>
       <Suspense fallback={<Loading></Loading>}>
         <TrendingTips tipsPromise={tipsPromise}></TrendingTips>
       </Suspense>
